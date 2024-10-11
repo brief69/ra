@@ -1,0 +1,83 @@
+r24-10-10
+
+要件：
+
+1. ディレクトリ構造
+
+ra/
+├── frontend/                # フロントエンド関連
+│   ├── lib/                 # Flutterのソースコード
+│   ├── test/                # テストコード
+│   └── pubspec.yaml         # Flutterの依存関係
+├── backend/                 # バックエンド関連
+│   ├── cmd/                 # Goのエントリーポイント
+│   ├── pkg/                 # Goのパッケージ
+│   ├── internal/            # 内部パッケージ
+│   ├── test/                # テストコード
+│   └── go.mod               # Goの依存関係
+├── database/                # データベース関連
+│   ├── migrations/          # マイグレーションファイル
+│   └── docker-compose.yml   # Docker Composeファイル
+├── docs/                    # ドキュメント
+├── .env                     # 環境変数ファイル
+├── .gitignore               # Gitの無視ファイル
+└── README.md                # プロジェクトの概要
+
+2. フレームワーク、ライブラリ
+
+2.1 フロントエンド（Flutter）
+• 状態管理：
+  - Riverpod：Providerの拡張版、より柔軟
+• UIコンポーネント：
+  - Flutter Material：標準UI
+
+2.2 バックエンド（Go）
+• Webフレームワーク：
+  - Gin：高速で軽量、豊富なミドルウェア
+  - Echo：シンプルで直感的なルーティング
+• データベース接続：
+  - GORM：ORM（PostgreSQL、MySQLなど対応）
+  - MongoDB Driver：MongoDB用公式ドライバ
+• gRPC：
+  - gRPC-Go：ブロックチェーン通信用
+
+2.3 APIゲートウェイ（Node.js）
+• Express：シンプルで柔軟
+• NestJS：TypeScriptベース、モジュール化アーキテクチャ
+
+2.4 データベース
+• PostgreSQL：
+  - pgx：高性能Goドライバ
+• MongoDB：
+  - Mongoose：Node.js用ORM
+
+2.5 セキュリティ
+• JWT：
+  - jsonwebtoken：Node.js用
+  - dgrijalva/jwt-go：Go用
+
+データベース接続:
+GORM: GoのORMライブラリ。PostgreSQLやMySQLなどに対応。
+MongoDB Driver: MongoDBを使用する場合の公式ドライバ。
+gRPC:
+gRPC-Go: 各ブロックチェーンとの通信に使用するためのライブラリ。
+
+APIゲートウェイ
+Node.js:
+Express: シンプルで柔軟なWebフレームワーク。APIゲートウェイの構築に適している。
+NestJS: TypeScriptベースのフレームワークで、モジュール化されたアーキテクチャを提供。
+
+データベース
+PostgreSQL:
+pgx: GoでPostgreSQLを扱うための高性能なドライバ。
+MongoDB:
+Mongoose: Node.jsでMongoDBを扱うためのORMライブラリ。
+
+セキュリティ
+JWT:
+jsonwebtoken: Node.jsでJWTを生成・検証するためのライブラリ。
+dgrijalva/jwt-go: GoでJWTを扱うためのライブラリ。
+
+その他:
+Docker: 開発環境と本番環境の一貫性を保つために使用。
+Kubernetes: コンテナのオーケストレーションツールとして使用。

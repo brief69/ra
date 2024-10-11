@@ -1,6 +1,6 @@
 # ra
 
-I am a 2D plane.
+ 
 
 ## Overview
 
@@ -26,7 +26,7 @@ Installation
 
 To get started with Ra, clone this repository and follow the setup instructions below:
 
-git clone https://github.com/your-username/ra.git
+git clone https://github.com/brief69/ra.git
 cd ra
 
 Prerequisites
@@ -65,3 +65,26 @@ Roadmap
 	• Implement advanced transaction monitoring and notifications
 	• Integrate with other cross-chain protocols for increased compatibility
 	• Develop an SDK for easy integration with other projects
+
+
+   git clone https://github.com/brief69/ra.git
+
+   cd ra
+
+
+   cd frontend
+   npm install
+   cd ../backend
+   npm install
+
+      cd ../backend
+   go mod tidy
+
+      docker-compose up -d
+
+	     cd frontend
+   flutter run
+
+      cd ../backend
+   go run main.go
+
